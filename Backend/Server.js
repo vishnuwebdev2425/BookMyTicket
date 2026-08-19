@@ -2,7 +2,8 @@ const express=require('express');
 const { default: mongoose } = require('mongoose');
 const app=express();
 app.use(express.json())
-const movierouter=require("./routes/Movieroute")
+const movierouter=require("./routes/Movieroute");
+const theathrerouter=require("./routes/Theathreroute");
 
 const InitalizeDB=async()=>{
     try{
@@ -24,5 +25,5 @@ const InitalizeDB=async()=>{
 
 
 app.use("/",movierouter);
-
+app.use("/",theathrerouter);
 InitalizeDB();
