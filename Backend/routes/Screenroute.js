@@ -5,7 +5,7 @@ const screenroute=express.Router();
 
 screenroute.post("/addscreendetails",async(req,res)=>{
     try{
-        console.log("Sever Reached SuccssFully");
+        
         const allowedData = ["theathreId", "name", "seatLayout"];
         const data=req.body;
 
