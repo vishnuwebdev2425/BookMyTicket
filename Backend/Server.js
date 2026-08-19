@@ -4,6 +4,7 @@ const app=express();
 const movierouter = require("./routes/Movieroute");
 const theathrerouter = require("./routes/Theathreroute");
 const screenrouter = require("./routes/Screenroute");
+const showrouter=require("./routes/Showroute");
 app.use(express.json())
 
 
@@ -29,4 +30,5 @@ const InitalizeDB=async()=>{
 app.use("/",movierouter);
 app.use("/",theathrerouter);
 app.use("/",screenrouter);
+app.use("/",showrouter);
 InitalizeDB();
